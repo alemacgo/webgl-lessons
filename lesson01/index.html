@@ -156,7 +156,7 @@
         // model-view Matrix
         mat4.identity(mvMatrix);
 
-        mat4.translate(mvMatrix, [-10, 30.0, -25.0]);
+        mat4.translate(mvMatrix, [-10, 200.0, -25.0]);
         gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
         setMatrixUniforms();
