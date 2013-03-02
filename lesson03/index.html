@@ -227,7 +227,7 @@
         mat4.translate(mvMatrix, [3.0, 0.0, 0.0]);
 
         mvPushMatrix();
-        mat4.rotate(mvMatrix, degToRad(rSquare), [1, 0, 0]);
+        mat4.rotate(mvMatrix, degToRad(rSquare), [0, 1, 0]);
 
         gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
@@ -250,7 +250,7 @@
             var elapsed = timeNow - lastTime;
 
             rTri += (90 * elapsed) / 1000.0;
-            rSquare += (75 * elapsed) / 1000.0;
+            rSquare += (90 * elapsed) / 1000.0;
         }
         lastTime = timeNow;
     }
